@@ -10,46 +10,36 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor: Colors.black,
-        body: Center(
-          child: Column(
-            children: [
-              Text(
-                'Hello',
-                style: TextStyle(
-                    fontSize: 50,
-                    color: Colors.red,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.yellow,
-                    fontWeight: FontWeight.bold
-                ),
-              ),
-              Text(
-                'Dart',
-                style: TextStyle(
-                    fontSize: 50,
-                    color: Colors.red,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.yellow,
-                    fontWeight: FontWeight.bold
-                ),
-              ),
-              Text(
-                'Flutter',
-                style: TextStyle(
-                    fontSize: 50,
-                    color: Colors.red,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.yellow,
-                    fontWeight: FontWeight.bold
-                ),
-              ),
-            ],
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        appBar: AppBar(
+          backgroundColor: Colors.red,
+          leading: const Icon(
+            Icons.menu,
+            color: Colors.white,
           ),
+          centerTitle: true,
+          title: const Text(
+            'Flutter App',
+            style: TextStyle(
+                color: Colors.white,
+                fontSize: 25,
+                fontWeight: FontWeight.bold,
+                letterSpacing: 2),
+          ),
+        ),
+        body: const Center(
+            child: Text(
+              'Red & White Group of Institutes\nOne Step in Changing Education Chain...',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                  color: Colors.red,
+                  fontSize: 19,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 1,
+              ),
+            ),
         ),
       ),
     );
