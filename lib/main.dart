@@ -13,19 +13,45 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        backgroundColor : Colors.black,
+        backgroundColor: Colors.black,
         body: Center(
-            child: Column(
-              children: [
-                Text('Hello', style:
-                TextStyle(fontSize: 50,color: Colors.red,decoration: TextDecoration.underline,decorationColor: Colors.yellow,fontWeight: FontWeight.bold),),
-                Text('Dart',style: TextStyle(fontSize: 50,color: Colors.red,decoration: TextDecoration.underline,decorationColor: Colors.yellow,fontWeight: FontWeight.bold),),
-                Text('Flutter',style: TextStyle(fontSize: 50,color: Colors.red,decoration: TextDecoration.underline,decorationColor: Colors.yellow,fontWeight: FontWeight.bold),),],
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          child: Column(
+            children: [
+              Text(
+                'Hello',
+                style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.red,
+                    decoration: TextDecoration.underline,
+                    decorationColor: Colors.yellow,
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+              Text(
+                'Dart',
+                style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.red,
+                    decoration: TextDecoration.underline,
+                    decorationColor: Colors.yellow,
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+              Text(
+                'Flutter',
+                style: TextStyle(
+                    fontSize: 50,
+                    color: Colors.red,
+                    decoration: TextDecoration.underline,
+                    decorationColor: Colors.yellow,
+                    fontWeight: FontWeight.bold
+                ),
+              ),
+            ],
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           ),
         ),
-       ),
+      ),
     );
   }
 }
-
