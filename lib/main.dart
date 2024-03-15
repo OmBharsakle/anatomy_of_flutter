@@ -30,16 +30,16 @@ class MyApp extends StatelessWidget {
           ),
         ),
         body: const Center(
-            child: Text(
-              'Red & White Group of Institutes\nOne Step in Changing Education Chain...',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                  color: Colors.red,
-                  fontSize: 19,
-                  fontWeight: FontWeight.bold,
-                  letterSpacing: 1,
-              ),
+          child: Text(
+            'Red & White Group of Institutes\nOne Step in Changing Education Chain...',
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: Colors.red,
+              fontSize: 19,
+              fontWeight: FontWeight.bold,
+              letterSpacing: 1,
             ),
+          ),
         ),
       ),
     );
