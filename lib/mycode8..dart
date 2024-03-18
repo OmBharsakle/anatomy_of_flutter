@@ -38,30 +38,30 @@ class MyApp extends StatelessWidget {
                   text: '  ',
                 ),
                 TextSpan(
-                    text: 'Red & White\n',
+                  text: 'Red & White\n',
                   style: TextStyle(
-                    fontSize: 60,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.red
+                      fontSize: 60,
+                      color: Colors.red,
+                      fontWeight: FontWeight.bold,
+                      decoration: TextDecoration.underline,
+                      decorationColor: Colors.red
                   ),
                 ),
                 TextSpan(
-                    text: '   Multimedia Education\n',
+                  text: '   Multimedia Education\n',
                   style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red
+                      fontSize: 30,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red
 
                   ),
                 ),
                 TextSpan(
-                    text: 'shaping "skills" for "scaling" higher.....!\n',
+                  text: 'shaping "skills" for "scaling" higher.....!\n',
                   style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red
+                      fontSize: 20,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.red
 
                   ),
                 ),
