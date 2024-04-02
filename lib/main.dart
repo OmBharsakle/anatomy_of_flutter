@@ -1,75 +1,154 @@
 import 'package:flutter/material.dart';
 
+// // # 1st Ui
+// void main() {
+//   runApp(
+//     MaterialApp(
+//       debugShowCheckedModeBanner: false,
+//       home: Scaffold(
+//         backgroundColor: Color(0xff7CB342),
+//         appBar: AppBar(
+//           centerTitle: true,
+//           backgroundColor: Color(0xff8BC34A),
+//           title: const Text(
+//             'My App',
+//             style: TextStyle(
+//                 color: Colors.white,
+//                 fontWeight: FontWeight.w600,
+//                 fontSize: 20,
+//                 letterSpacing: 2),
+//           ),
+//         ),
+//         body: Center(
+//           child: Container(
+//             alignment: Alignment.center,
+//             child: Text(
+//               'oooo',
+//               style: TextStyle(fontSize: 200, letterSpacing: -63,color: Colors.black38),
+//             ),
+//             width: 350,
+//             height: 350,
+//             decoration: BoxDecoration(
+//               color: Color(0xffB2FF59),
+//               border: Border.all(
+//                 color: Color(0xff4CAF50),
+//                 width: 30,
+//               ),
+//             ),
+//           ),
+//         ),
+//       ),
+//     ),
+//   );
+// }
+
+// // // # 2nd Ui
+// void main() {
+//   runApp(MaterialApp(
+//     debugShowCheckedModeBanner: false,
+//     home: Scaffold(
+//       appBar: AppBar(
+//         title: Text(
+//           'Mission Of RNW',
+//           style: TextStyle(
+//             fontWeight: FontWeight.w500,
+//             letterSpacing: 1,
+//             color: Colors.white,
+//           ),
+//         ),
+//         centerTitle: true,
+//         backgroundColor: Color(0xffFF5252),
+//       ),
+//       body: Center(
+//         child: Container(
+//           alignment: Alignment.center,
+//           child: Text(
+//             'Shaping "skills" for "scaling" higher \n-RNW',
+//             style: TextStyle(
+//               fontWeight: FontWeight.bold,
+//               fontSize: 18,
+//             ),
+//           ),
+//           width: 350,
+//           height: 100,
+//           decoration: BoxDecoration(
+//             color: Color(0xffff8c8c),
+//             border: Border(left: BorderSide(color: Colors.red,width: 10))
+//           ),
+//         ),
+//       ),
+//     ),
+//   ));
+// }
+
+// // # 2nd Ui
+
 void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
+  runApp(
+    MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
-          toolbarHeight: 70,
           backgroundColor: Colors.red,
-          leading: const Icon(
-            Icons.menu,
-            color: Colors.white,
-          ),
-          centerTitle: true,
-          title: const Text(
-            'My RW8',
+          title: Text(
+            'Mix-Up',
             style: TextStyle(
                 color: Colors.white,
-                fontSize: 25,
-                fontWeight: FontWeight.bold,
-                letterSpacing: 2),
+                letterSpacing: 1,
+                fontWeight: FontWeight.w500),
           ),
+          centerTitle: true,
         ),
-        body: const Center(
-          child: Text.rich(
-            TextSpan(
-              children: [
-                TextSpan(
-                  text: '  ',
+        body: Center(
+          child: Container(
+            width: 410,
+            height: 410,
+            decoration: BoxDecoration(
+              color: Colors.blue,
+            ),
+            alignment: Alignment.bottomRight,
+            child: Container(
+              width: 350,
+              height: 350,
+              decoration: BoxDecoration(
+                color: Colors.yellow,
+              ),
+              alignment: Alignment.bottomRight,
+              child: Container(
+                width: 300,
+                height: 300,
+                decoration: BoxDecoration(
+                  color: Colors.pink,
                 ),
-                TextSpan(
-                    text: 'Red & White\n',
-                  style: TextStyle(
-                    fontSize: 60,
-                    color: Colors.red,
-                    fontWeight: FontWeight.bold,
-                    decoration: TextDecoration.underline,
-                    decorationColor: Colors.red
+                alignment: Alignment.topLeft,
+                child: Container(
+                  width: 250,
+                  height: 250,
+                  decoration: BoxDecoration(
+                    color: Colors.orange,
+                  ),
+                  alignment: Alignment.topLeft,
+                  child: Container(
+                    width: 200,
+                    height: 200,
+                    decoration: BoxDecoration(
+                      color: Colors.green,
+                    ),
+                    alignment: Alignment.center,
+                    child: Container(
+                      width: 170,
+                      height: 170,
+                      decoration: BoxDecoration(
+                        color: Colors.cyanAccent,
+                      ),
+                    ),
                   ),
                 ),
-                TextSpan(
-                    text: '   Multimedia Education\n',
-                  style: TextStyle(
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red
-
-                  ),
-                ),
-                TextSpan(
-                    text: 'shaping "skills" for "scaling" higher.....!\n',
-                  style: TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
-                    color: Colors.red
-
-                  ),
-                ),
-              ],
+              ),
             ),
           ),
         ),
       ),
-    );
-  }
+    ),
+  );
 }
