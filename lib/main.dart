@@ -90,7 +90,7 @@ void main() {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.red,
-          title: Text(
+          title: const Text(
             'Mix-Up',
             style: TextStyle(
                 color: Colors.white,
@@ -103,42 +103,42 @@ void main() {
           child: Container(
             width: 410,
             height: 410,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Colors.blue,
             ),
             alignment: Alignment.bottomRight,
             child: Container(
               width: 350,
               height: 350,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Colors.yellow,
               ),
               alignment: Alignment.bottomRight,
               child: Container(
                 width: 300,
                 height: 300,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Colors.pink,
                 ),
                 alignment: Alignment.topLeft,
                 child: Container(
                   width: 250,
                   height: 250,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.orange,
                   ),
                   alignment: Alignment.topLeft,
                   child: Container(
                     width: 200,
                     height: 200,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.green,
                     ),
                     alignment: Alignment.center,
                     child: Container(
                       width: 170,
                       height: 170,
-                      decoration: BoxDecoration(
+                      decoration: const BoxDecoration(
                         color: Colors.cyanAccent,
                       ),
                     ),
