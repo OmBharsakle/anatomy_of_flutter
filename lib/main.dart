@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // // # 1st Ui
@@ -114,62 +115,87 @@ import 'package:flutter/material.dart';
 //   );
 // }
 
-void main() {
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          backgroundColor: Color(0xff6F4E42),
-          title: const Text(
-            'Mashal',
-            style: TextStyle(
-                color: Colors.white,
-                fontWeight: FontWeight.w600,
-                fontSize: 20,
-                letterSpacing: 2),
-          ),
-        ),
-        body: CssButton(),
-      ),
-    ),
-  );
+
+void main()
+{
+  runApp(MyApp());
 }
 
-Widget CssButton() {
-  return Center(
-    child: Container(
-      width: 270,
-      height: 90,
-      decoration: BoxDecoration(
-        gradient: LinearGradient(colors: [
-          // 446FA3
-          Color(0xffD44E93),
-          Color(0xffD44E93),
-          Color(0xffF44180),
-          Color(0xffFF536B)
-        ]),
-        borderRadius: BorderRadius.circular(35),
-        boxShadow: [
-          BoxShadow(
-              color: Colors.pinkAccent.withOpacity(0.8),
-              blurStyle: BlurStyle.normal,
-              blurRadius: 20,
-              offset: const Offset(0, 20),
-              spreadRadius: 2
-          ),
-        ],
-      ),
-      alignment: Alignment.center,
-      child: Text(
-        'Call To Action',
-        style: TextStyle(
-            color: Colors.white,
-            fontSize: 25,
-            letterSpacing: 1,
-            fontWeight: FontWeight.w500),
-      ),
-    ),
-  );
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
 }
+
+class _MyAppState extends State<MyApp> {
+  @override
+  Widget build(BuildContext context) {
+    return  MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Color(0xff6F4E42),
+        title: const Text(
+          'Mashal',
+          style: TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w600,
+              fontSize: 20,
+              letterSpacing: 2),
+        ),
+      ),body: Center(
+          child: Stack(
+            children: [
+              Container(
+                width: 350,
+                height: 350,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    shape: BoxShape.circle,
+                    border: Border.all(color: Colors.orange,width: 45)
+                ),
+                alignment: Alignment.topCenter,),
+              Positioned(
+                top: 30,
+                child: Container(
+                  width: 350,
+                  height: 250,
+                  decoration: BoxDecoration(
+                    color: Colors.orange,
+                    shape: BoxShape.circle,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 70,
+                        height: 70,
+                        margin: EdgeInsets.only(right: 25,bottom: 90),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                      Container(
+                        width: 70,
+                        height: 70,
+                        margin: EdgeInsets.only(left: 25,bottom: 90),
+                        decoration: BoxDecoration(
+                          color: Colors.white,
+                          shape: BoxShape.circle,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
+        )
+      ),
+    );
+
+  }
+}
+
