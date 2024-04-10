@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -22,38 +23,63 @@ class _MyAppState extends State<MyApp> {
         backgroundColor: Color(0xffEEEEEE),
         appBar: AppBar(
           title: const Text(
-            'Dynamic List',
+            'Icons Editor',
             style: TextStyle(
-                color: Colors.white,
                 fontWeight: FontWeight.w600,
                 letterSpacing: 1),
           ),
           centerTitle: true,
-          backgroundColor: Color(0xFF244D61),
         ),
-        body: SingleChildScrollView(
+        body: Padding(
+          padding: const EdgeInsets.all(10),
           child: Column(
             children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Row(
-                  children: [
-                    Container(
-                      width: 120,
-                      height: 120,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Color(0xFFF5F5F5),
-                      ),
-                      child: Icon(Icons.add),
+              Row(
+                children: [
+                  Container(
+                    width: 380,
+                    height: 340,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                      BoxShadow(
+                      color: Colors.black45,
+                      spreadRadius: 5,
+                      blurRadius: 5,),
+                     ]
                     ),
-                  ],
-                ),
-              )
+                    child: Center(child: Icon(Icons.arrow_back_rounded,size: 100,)),
+                  ),
+                ],
+              ),
+              SizedBox(height: 20,),
+              Row(
+                children: [
+                  Container(
+                    width: 380,
+                    height: 70,
+                    decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(20),
+                      boxShadow: [
+                      BoxShadow(
+                      color: Colors.black26,
+                      spreadRadius: 5,
+                      blurRadius: 5,),
+                     ]
+                    ),
+                    child: Center(child: Text('Select Color',style: TextStyle(
+                      fontSize: 25,
+                      fontWeight: FontWeight.w600,
+                    ),),),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
       ),
     );
   }
-}
+  }
