@@ -39,12 +39,12 @@ class _MyAppState extends State<MyApp> {
                 children: [
                   Expanded(
                       child: SingleChildScrollView(
-                    child: Column(
-                        children: List.generate(
-                      10,
-                      (index) => ColumnContainer(index + 1),
-                    )),
-                  )),
+                        child: Column(
+                            children: List.generate(
+                              10,
+                                  (index) => ColumnContainer(index + 1),
+                            )),
+                      )),
                 ],
               ),
             ),
@@ -56,9 +56,9 @@ class _MyAppState extends State<MyApp> {
                 scrollDirection: Axis.horizontal,
                 child: Row(
                     children: List.generate(
-                  10,
-                  (index) => RowContainer(index + 1),
-                )),
+                      10,
+                          (index) => RowContainer(index + 1),
+                    )),
               ),
             ),
           ],
@@ -75,9 +75,9 @@ class _MyAppState extends State<MyApp> {
       color: Colors.yellow,
       child: Center(
           child: Text(
-        '$index',
-        style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
-      )),
+            '$index',
+            style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+          )),
     );
   }
 }
@@ -90,8 +90,8 @@ Container RowContainer(int index) {
     color: Colors.yellow,
     child: Center(
         child: Text(
-      '$index',
-      style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
-    )),
+          '$index',
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.w500),
+        )),
   );
 }
