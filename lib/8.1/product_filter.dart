@@ -116,18 +116,24 @@ Widget Product_Not_Found()
 }
 
 List productsList = [
-  {'id': 1, 'name': 'Watch', 'sub': 'Wearables', 'price': 10000},
-  {'id': 2, 'name': 'T-Shirt', 'sub': 'Wearables', 'price': 52000},
-  {'id': 3, 'name': 'Jeans', 'sub': 'Wearables', 'price': 84000},
+  {'id': 1, 'name': 'Watch', 'sub': 'Wearables', 'price': 1000},
+  {'id': 2, 'name': 'T-Shirt', 'sub': 'Wearables', 'price': 520},
+  {'id': 3, 'name': 'Jeans', 'sub': 'Wearables', 'price': 840},
   {'id': 4, 'name': 'Refrigerator', 'sub': 'Electronics', 'price': 18000},
   {'id': 5, 'name': 'Microwave', 'sub': 'Electronics', 'price': 15000},
-  {'id': 6, 'name': 'Blazer', 'sub': 'Wearables', 'price': 15000},
+  {'id': 6, 'name': 'Blazer', 'sub': 'Wearables', 'price': 1500},
   {'id': 7, 'name': 'Laptop', 'sub': 'Electronics', 'price': 70000},
   {'id': 8, 'name': 'Mobile', 'sub': 'Electronics', 'price': 20000},
-  {'id': 9, 'name': 'Cold-Drinks', 'sub': 'Refreshment', 'price': 10000},
+  {'id': 9, 'name': 'Cold-Drinks', 'sub': 'Refreshment', 'price': 100},
   {'id': 10, 'name': 'Earbuds', 'sub': 'Electronics', 'price': 1000},
   {'id': 11, 'name': 'iPhone', 'sub': 'Electronics', 'price': 60000},
   {'id': 12, 'name': 'Macbook', 'sub': 'Electronics', 'price': 80000},
+  {'id': 13, 'name': 'Sneakers', 'sub': 'Wearables', 'price': 2000},
+  {'id': 14, 'name': 'Backpack', 'sub': 'Wearables', 'price': 3000},
+  {'id': 15, 'name': 'Smartwatch', 'sub': 'Wearables', 'price': 5000},
+  {'id': 16, 'name': 'Headphones', 'sub': 'Electronics', 'price': 4000},
+  {'id': 17, 'name': 'Gaming Console', 'sub': 'Electronics', 'price': 25000},
+  {'id': 18, 'name': 'Speaker System', 'sub': 'Electronics', 'price': 12000},
 ];
 
 double main_value = 0;
