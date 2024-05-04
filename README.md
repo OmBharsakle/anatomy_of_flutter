@@ -19,6 +19,12 @@
 
 <h1></h1>
 
+<h3 align="center"> 5.1 Flutter Buttons</h3>
+
+<h1></h1>
+
+<h1></h1>
+
 <h3 align="center"> 5.2 Asynchronous Programming</h3>
 
 <h1></h1>
@@ -129,8 +135,24 @@ void main(){
 }
 ```
 
-###
+<h1></h1>
 
-<h1 align="left"> </h1>
+<h3 align="center"> 5.3 Digital Clock</h3>
 
-###
+<h1></h1>
+
+<div align="center">
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/3ad46ed3-b23f-44d9-9f37-6b5458022792"  />
+</div>
+
+<h1></h1>
+
+<h3 align="center">5.4 Analogue Clock</h3>
+
+<h1></h1>
+
+<h1></h1>
+
+<h3 align="center">Timer App</h3>
+
+<h1></h1>
