@@ -22,6 +22,10 @@
 <h3 align="center"> 5.1 Flutter Buttons</h3>
 
 <h1></h1>
+<div align="center">
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/0e34fd89-12f5-4cb2-a966-604d6256c620"  />
+</div>
+
 
 <h1></h1>
 
