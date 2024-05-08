@@ -156,3 +156,297 @@ void main(){
 <h3 align="center">Timer App</h3>
 
 <h1></h1>
+
+<h1></h1>
+
+<h3 align="center">Resume App Daily Task</h3>
+
+<h1></h1>
+
+# What is List and Map ?
+## List  (fixed-length & growable) :
+
+- ```List is collection of multiple values which can have multiple datatype.``` 
+- List is an ordered collection of values, which contains index values to access it's inner attributes.
+- List have indexes like arrays.
+- List can be created using '[]'.
+
+### How to declration List :
+
+- ```Syntax : ``` List variableName = [Values];
+
+### Example
+```
+void main() {
+  
+    List name = ["OMG", "SKY", "CREATION", "OMGCREATION"];
+
+    print(name[0]);
+}
+```
+
+#### To know length of List :
+```
+  void main() {
+    List name = ["OMG", "SKY", "CREATION", "OMGCREATION"];
+  
+    print(name.length);
+}
+```
+
+#### To add up :
+```
+  void main() {
+    List name = ["OMG", "SKY", "CREATION", "OMGCREATION"];
+  
+    print(name[0]);
+  
+    name.add(10);
+  
+    print(name);
+}
+```
+
+#### To add Multiple values :
+```
+  void main() {
+
+   List name = ["OMG", "SKY", "CREATION", "OMGCREATION"];
+  
+    print(name[0]);
+  
+    name.addAll(['OMG2', 40, 90]);
+  
+    print(name);
+}
+```
+
+#### To Insert to value :
+```
+  void main() {
+   List name = ["OMG", "SKY", "CREATION", "OMGCREATION"];
+
+    print(name[0]);
+
+    name.insert(2, 50);
+
+    print(name);
+}
+```
+
+#### To Insert Multiple values :
+```
+  void main() {
+    List name = ["OMG", "SKY", "CREATION", "OMGCREATION"];
+  
+    print(name[0]);
+  
+    name.insertAll(2, [1, 2, 3, 4]);
+  
+    print(name);
+}
+```
+
+#### To know the index of the list Value :
+```
+  void main() {
+  List name = ["OMG", "SKY", "CREATION", "OMGCREATION"];
+  
+    print(name[0]);
+  
+    int i = name.indexOf("Jaynesh");
+  
+    print(i);
+}
+```
+
+#### To Remove a Value :
+```
+  void main() {
+   List name = ["OMG", "SKY", "CREATION", "OMGCREATION"];
+  
+    print(name[0]);
+  
+    name.remove("B");
+  
+    print(name);
+}
+```
+
+#### To Remove a value for Index :
+```
+  void main() {
+  List name = ["OMG", "SKY", "CREATION", "OMGCREATION"];
+  
+    print(name[0]);
+  
+    name.removeAt(3);
+  
+    print(name);
+}
+
+```
+
+#### To Reverse a List :
+```
+  void main() {
+    List name = ["OMG", "SKY", "CREATION", "OMGCREATION"];
+  
+    print(name[0]);
+  
+    print(name.reversed.toList());
+}
+```
+
+#### To Show Datatype :
+```
+  void main() {
+    List name = ["OMG", "SKY", "CREATION", "OMGCREATION"];
+  
+    print(name[0]);
+  
+    print(name.runtimeType);
+}
+```
+
+## Generics   
+
+- Generics will be used to fix the datatype in the list.
+- fix any one data type in the collection data types.
+- it can be applied to either data types, value or both.
+- ``` Example : ``` List <int> number = [10,20,30,40,50];
+
+### Example
+
+```
+import 'dart:io';
+
+  void main() {
+    List <String> name = [];
+
+    print("Enter number of Name : ");
+    int n = int.parse(stdin.readLineSync()!);
+
+    for (int i = 0; i < n; i++) {
+      print("Enter Name : ");
+      String val = stdin.readLineSync()!;
+      name.add(val);
+    }
+
+    print(name);
+  }
+```
+## Map
+
+- ```Map is collection of values. Map is store data in key value pair. which can have different datatype.``` 
+- Map can be created using '{}'.
+
+### syntax :
+```
+Map mapName = {
+  key1 : value1, 
+  key2 : value2, 
+  ... 
+  keyN : valueN, 
+  };
+```
+### Example :
+``` 
+void main() {
+    Map emp = {
+      'name': "Sanju",
+      'age': 18,
+      'per': 79.23,
+      'salary': 89000,
+    };
+    
+    emp.forEach((key, value) {
+      print("${key} : ${value}");
+    });
+  }
+```
+
+### List of Map :
+``` 
+void main() {
+ 
+  List myData = [
+    {
+      'name': "OMG",
+      'age': 20,
+      'per': 79.23,
+      'salary': 100000,
+    },
+    {
+      'name': "Ankit",
+      'age': 20,
+      'per': 80.23,
+      'salary': 10000,
+    },
+    {
+      'name': "Hiren",
+      'age': 18,
+      'per': 85.23,
+      'salary': 500000,
+    }
+  ];
+
+  myData.forEach((e) {
+    e.forEach((key, val) {
+      print("${key} : ${val}");
+    });
+    print("");
+  });
+}
+```
+###
+
+# Status Bar :
+## In Build Context (Global) : 
+```
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Colors.green),
+    );
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+    );
+  }
+}
+```
+
+## In AppBar :
+```
+appBar: AppBar(
+        backgroundColor: Colors.blueAccent,
+        toolbarHeight: 80,
+        systemOverlayStyle: const SystemUiOverlayStyle(
+          statusBarColor: Colors.green
+        )
+      ),
+```
+
+# Device Orientation :
+```
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      const SystemUiOverlayStyle(statusBarColor: Colors.green),
+    );
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.landscapeLeft,
+    ]);
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      routes: AppRoutes.routes,
+    );
+  }
+}
+```
