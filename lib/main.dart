@@ -7,6 +7,8 @@ import 'Digital Clock/analog_clock.dart';
 import 'Digital Clock/digital_clock.dart';
 import 'Drawer/gmail_drawer.dart';
 import 'Drawer/profile_drawer.dart';
+import 'Login_Signup_Page/intro_page.dart';
+import 'Login_Signup_Page/login_page.dart';
 import 'flutter butten/buttons.dart';
 
 void main() {
@@ -26,7 +28,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/' :(context) => Buttons(),
+        '/' :(context) => Intro_Page(),
       },
     );
 
