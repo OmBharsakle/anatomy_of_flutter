@@ -6,10 +6,10 @@ class AnalogClock extends StatefulWidget {
   const AnalogClock({super.key});
 
   @override
-  State<AnalogClock> createState() => _AnalogClockAppState();
+  State<AnalogClock> createState() => _ClockState();
 }
 
-class _AnalogClockAppState extends State<AnalogClock> {
+class _ClockState extends State<AnalogClock> {
   @override
   Widget build(BuildContext context) {
     double width = MediaQuery.of(context).size.width;
@@ -18,158 +18,117 @@ class _AnalogClockAppState extends State<AnalogClock> {
         dateTime = DateTime.now();
       });
     });
-    return SafeArea(
-        child: Scaffold(
-          body: Container(
-            height: double.infinity,
+    return Scaffold(
+      body: Container(
+        height: double.infinity,
+        width: double.infinity,
+        decoration: BoxDecoration(
+            color: Colors.black,
+            image: DecorationImage(
+                fit: BoxFit.cover,
+                opacity: 0.6,
+                image: NetworkImage('https://images.wallpapersden.com/image/download/artistic-minimalist-hd-forest-new-art-2022_bWlna2yUmZqaraWkpJRmbmdlrWZlbWU.jpg')
+            )
+        ),
+        child: Padding(
+          padding: const EdgeInsets.symmetric(vertical: 50),
+          // child: Column(
+          //   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          //   children: [
+          //     Text('Alaram',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 25),),
+          //     Column(
+          //       children: [
+          //         Icon(Icons.access_alarm_sharp,color: Colors.white,size: 50,),
+          //         Text('${(dateTime.hour > 12) ? (dateTime.hour % 12).toString().padLeft(2, '0') : (dateTime.hour).toString().padLeft(2, '0')} : ${(dateTime.minute).toString().padLeft(2, '0')}',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 65),),
+          //         Text('${days[dateTime.weekday - 1]}',style: TextStyle(color: Colors.white,fontWeight: FontWeight.w600,fontSize: 25),),
+          //       ],
+          //     ),
+          //     Row(
+          //       mainAxisAlignment: MainAxisAlignment.center,
+          //       children: [
+          //         ElevatedButton(
+          //             style: ButtonStyle(
+          //               backgroundColor: MaterialStateProperty.all(Colors.white),
+          //             ),
+          //             onPressed: () {
+          //
+          //             }, child: Text(' Soons ',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w600,fontSize: 20))),
+          //         SizedBox(width: 50,),
+          //         ElevatedButton(onPressed: () {
+          //
+          //         }, child: Text('Dismiss',style: TextStyle(color: Colors.black,fontWeight: FontWeight.w600,fontSize: 20))),
+          //       ],
+          //     )
+          //   ],
+          // ),
+          child: Container(
             width: double.infinity,
-            padding: const EdgeInsets.all(12),
-            decoration: BoxDecoration(
-                color: Colors.black,
-                image: DecorationImage(
-                    fit: BoxFit.cover,
-                    opacity: 0.6,
-                    image: NetworkImage('https://images.wallpapersden.com/image/download/artistic-minimalist-hd-forest-new-art-2022_bWlna2yUmZqaraWkpJRmbmdlrWZlbWU.jpg')
-                )
-            ),
+            height: 300,
             child: Stack(
               children: [
-                Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: [
-                        Text(
-                          '${(dateTime.hour > 12) ? (dateTime.hour % 12).toString().padLeft(2, '0') : (dateTime.hour).toString().padLeft(2, '0')} : ${(dateTime.minute).toString().padLeft(2, '0')} : ${(dateTime.second).toString().padLeft(2, '0')}',
-                          style: const TextStyle(
-                              color: Colors.white,
-                              fontSize: 52,
-                              fontWeight: FontWeight.bold),
-                        ),
-                        Container(
-                          margin: const EdgeInsets.only(top: 22, left: 6),
-                          child: Text(
-                            (dateTime.hour > 12) ? 'PM' : 'AM',
-                            style: const TextStyle(
-                                color: Colors.white,
-                                fontSize: 20,
-                                fontWeight: FontWeight.bold),
-                          ),
-                        ),
-                      ],
+                Center(
+                  child: Container(
+                    width: 300,
+                    height: 300,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.black,width: 2)
                     ),
-                    const SizedBox(height: 6),
-                    Text(
-                      '${days[dateTime.weekday - 1]}',
-                      style: const TextStyle(
-                          color: Colors.white,
-                          fontSize: 28,
-                          fontWeight: FontWeight.bold),
-                    ),
-                    Container(
-                      margin: const EdgeInsets.only(top: 120, bottom: 190),
-                      height: 210,
-                      width: 210,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          width: 5,
-                          color: Colors.white,
-                        ),
-                      ),
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          // TODO Dot
-                          Container(
-                            height: 13,
-                            width: 13,
-                            decoration: const BoxDecoration(
-                                color: Colors.red, shape: BoxShape.circle),
-                          ),
-                          // TODO Angles
-                          ...List.generate(
-                            60,
-                                (index) => Transform.rotate(
-                              angle: ((index) * 6 * pi) / 180,
-                              child: ((index) % 5 == 0)
-                                  ? const VerticalDivider(
-                                thickness: 3,
-                                color: Colors.red,
-                                endIndent: 185,
-                              )
-                                  : const VerticalDivider(
-                                thickness: 2,
-                                color: Colors.grey,
-                                endIndent: 192,
-                              ),
-                            ),
-                          ),
-                          // TODO Hour
-                          Transform.rotate(
-                            angle: (dateTime.hour + (dateTime.minute / 60)) *
-                                30 *
-                                pi /
-                                180,
-                            child: const VerticalDivider(
-                              thickness: 4,
-                              color: Colors.red,
-                              indent: 50,
-                              endIndent: 95,
-                            ),
-                          ),
-                          // TODO Minute
-                          Transform.rotate(
-                            angle: (dateTime.minute * 6 * pi) / 180,
-                            child: const VerticalDivider(
-                              thickness: 3,
-                              color: Colors.white,
-                              indent: 35,
-                              endIndent: 98,
-                            ),
-                          ),
-                          // TODO Second
-                          Transform.rotate(
-                            angle: (dateTime.second * 6 * pi) / 180,
-                            child: const VerticalDivider(
-                              thickness: 3,
-                              color: Colors.grey,
-                              indent: 25,
-                              endIndent: 98,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: GestureDetector(
-                    onTap: () {
+                Center(
+                  child: Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        border: Border.all(color: Colors.black,width: 2)
+                    ),
+                  ),
+                ),
+                Center(
+                  child: Transform.rotate(
+                    angle: (dateTime.second*6)*pi/180,
+                    child: VerticalDivider(
+                      color: Colors.black,
+                      thickness: 2,
+                      width: 2,
+                      indent: 270,
+                      endIndent: 370,
+                    ),
+                  ),
+                ),
+                Center(
+                  child: Transform.rotate(
+                    angle: (dateTime.minute*6)*pi/180,
+                    child: VerticalDivider(
+                      color: Colors.black,
+                      thickness: 3,
+                      width: 3,
+                      indent: 270,
+                      endIndent: 370,
+                    ),
+                  ),
+                ),
+                Center(
+                  child: Transform.rotate(
+                    angle: (dateTime.hour*30)*pi/180,
+                    child: VerticalDivider(
+                      color: Colors.black,
 
-                    },
-                    child: Container(
-                      height: 60,
-                      width: double.infinity,
-                      alignment: Alignment.center,
-                      margin: const EdgeInsets.only(left: 10, right: 10),
-                      decoration: BoxDecoration(
-                        border: Border.all(color: Colors.white),
-                        borderRadius: BorderRadius.circular(30),
-                      ),
-                      child: const Text(
-                        'Change Theme',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
+                      thickness: 3,
+                      width: 3,
+                      indent: 270,
+                      endIndent: 370,
                     ),
                   ),
                 ),
               ],
             ),
           ),
-        ));
+        ),
+      ),
+    );
   }
 }
 

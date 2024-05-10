@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart' as cupertino;
 
 class Login_Page extends StatefulWidget {
   const Login_Page({super.key});
@@ -8,6 +9,7 @@ class Login_Page extends StatefulWidget {
 }
 
 class _Login_PageState extends State<Login_Page> {
+  bool hide=true;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,7 +53,11 @@ class _Login_PageState extends State<Login_Page> {
                 height: 20,
               ),
               TextField(
+                cursorColor: Colors.black,
                 decoration: InputDecoration(
+                    focusedBorder: OutlineInputBorder(
+                        borderSide: BorderSide(color: Colors.black)
+                    ),
                     hintText: 'E-Mail',
                     prefixIcon: Icon(
                       Icons.person_2_outlined,
@@ -65,10 +71,26 @@ class _Login_PageState extends State<Login_Page> {
                 height: 10,
               ),
               TextField(
+                cursorColor: Colors.black,
+                obscureText: hide,
                 decoration: InputDecoration(
-                    suffixIcon: Icon(
-                      Icons.remove_red_eye,
-                      size: 28,
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.black)
+                  ),
+
+                    suffixIcon: InkWell(
+                      onTap: () {
+                        setState(() {
+                          hide=!hide;
+                        });
+                      },
+                      child: hide?Icon(
+                        Icons.remove_red_eye,
+                        size: 28,
+                      ):Icon(
+                        cupertino.CupertinoIcons.eye_slash_fill,
+                        size: 28,
+                      ),
                     ),
                     hintText: 'Password',
                     prefixIcon: Icon(
