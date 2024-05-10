@@ -475,3 +475,21 @@ class MyApp extends StatelessWidget {
   <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/e64d62e2-903e-42ac-9f05-69bcdac28da2"/>
 </div>
 
+<h1></h1>
+
+<h3 align="center">Google Login Page With Validation</h3>
+
+<h1></h1>
+<div align="center">
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/889adc45-1b81-4a61-846b-9781b54bb11e"/>
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/56fa16cb-db98-4d56-821f-df59dc6232d6"/>
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/5d25bce2-c9e6-49cf-aed0-d8fda4049df3"/>
+  
+
+https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/b8d20312-dc86-48c2-a78c-1698e63835a9
+
+
+</div> 
+
+
+
