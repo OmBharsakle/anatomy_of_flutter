@@ -454,3 +454,24 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+
+<h1></h1>
+
+<h3 align="center">Login Page UI</h3>
+
+<h1></h1>
+<div align="center">
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/6b31c503-44a5-4a87-ac09-92fc66d85690"/>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/e558d169-fb82-4b93-b8b8-af3f820add29"/>
+</div>
+
+<h1></h1>
+
+<h3 align="center">Gmail Drawer</h3>
+
+<h1></h1>
+<div align="center">
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/e64d62e2-903e-42ac-9f05-69bcdac28da2"/>
+</div>
+
