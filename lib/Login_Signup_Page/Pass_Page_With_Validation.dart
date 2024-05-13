@@ -94,6 +94,7 @@ class _Pass_Page_With_ValidationState extends State<Pass_Page_With_Validation> {
                             Form(
                               key: fromkey,
                               child: TextFormField(
+                                obscureText: hide,
                                 validator: (value) {
                                   if (value!.isEmpty) {
                                     return 'Password is required';
@@ -131,10 +132,10 @@ class _Pass_Page_With_ValidationState extends State<Pass_Page_With_Validation> {
                             SizedBox(height: 5,),
                             Row(
                               children: [
-                                Checkbox(activeColor: Colors.blue,checkColor: Colors.white,value: store, onChanged: (value) {
+                                Checkbox(activeColor: Colors.blue,checkColor: Colors.white,value: hide, onChanged: (value) {
                                   setState(() {
                                     hide=!hide;
-                                    store=!store;
+                                    // store=!store;
                                   });
                                 },),
                                 Text('Show password',style: TextStyle(
@@ -161,6 +162,12 @@ class _Pass_Page_With_ValidationState extends State<Pass_Page_With_Validation> {
                                 ElevatedButton( style: ButtonStyle(
                                   backgroundColor: MaterialStatePropertyAll(Colors.blue),
                                 ),onPressed: () {
+                                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(content: Row(children: [
+                                    Text('Login Successfull!'),
+                                    TextButton(onPressed: () {
+                                      
+                                    }, child: Text('Undo'))
+                                  ],)));
                                   bool res = fromkey.currentState!.validate();
                                   if(res)
                                   {
