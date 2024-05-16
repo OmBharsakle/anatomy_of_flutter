@@ -7,6 +7,7 @@ import 'Digital Clock/analog_clock.dart';
 import 'Digital Clock/digital_clock.dart';
 import 'Drawer/gmail_drawer.dart';
 import 'Drawer/profile_drawer.dart';
+import 'Image Picker/Image_Picker.dart';
 import 'Login_Signup_Page/Google_Login_Page_With_Validation.dart';
 import 'Login_Signup_Page/intro_page.dart';
 import 'Login_Signup_Page/login_page.dart';
@@ -30,7 +31,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/' :(context) => Login_Page_With_Validation(),
+        '/' :(context) => Image_Picker(),
       },
     );
 
