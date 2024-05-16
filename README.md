@@ -491,5 +491,23 @@ https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/b8d20312-dc86
 
 </div> 
 
+<h1></h1>
+
+<h3 align="center">Image Picker</h3>
+
+<h1></h1>
+
+<div align="center">
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/6f605430-bb8c-4876-9467-37129c511ca5"/>
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/05d4be6e-b953-47c9-98d9-df7824bc2f93"/>
+
+
+
+https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/4d54a001-5ef0-4f75-8397-810d1754e7a7
+
+
+
+</div> 
+
 
 
