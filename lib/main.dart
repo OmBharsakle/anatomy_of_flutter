@@ -13,6 +13,7 @@ import 'Login_Signup_Page/intro_page.dart';
 import 'Login_Signup_Page/login_page.dart';
 import 'Login_Signup_Page/successfully.dart';
 import 'flutter butten/buttons.dart';
+import 'id_card/id_card.dart';
 
 void main() {
   runApp(MyApp());
@@ -31,7 +32,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/' :(context) => Image_Picker(),
+        '/' :(context) => Id_Card(),
       },
     );
 
