@@ -33,7 +33,7 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/' :(context) => Dynamic_Text_Field(),
+        '/' :(context) => AnalogClock(),
       },
     );
 
