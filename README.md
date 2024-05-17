@@ -155,6 +155,12 @@ void main(){
 
 <h1></h1>
 
+<div align="center">
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/39e0cf70-ea52-43fd-91ca-4f51328b726d" />
+</div>
+
+![image]()
+
 <h1></h1>
 
 <h3 align="center">Timer App</h3>
@@ -524,6 +530,21 @@ https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/fc13c276-cc7f
 
 
 
+
+</div> 
+
+
+<h1></h1>
+
+<h3 align="center">Dynamic Text Field</h3>
+
+<h1></h1>
+
+<div align="center">
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/eb191af9-4dce-44a8-a5da-978101c102ac"/>
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/7eb96729-c922-4a44-bcbb-277d098c9105"/>
+
+https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/fc13c276-cc7f-4e31-a8e5-a82d3676fc5a
 
 </div> 
 
