@@ -155,6 +155,12 @@ void main(){
 
 <h1></h1>
 
+<div align="center">
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/39e0cf70-ea52-43fd-91ca-4f51328b726d" />
+</div>
+
+![image]()
+
 <h1></h1>
 
 <h3 align="center">Timer App</h3>
