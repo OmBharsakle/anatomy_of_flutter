@@ -1,3 +1,4 @@
+import 'package:anatomy_of_flutter/Dynamic%20Text%20Field/ui.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -9,6 +10,7 @@ import 'Drawer/gmail_drawer.dart';
 import 'Drawer/profile_drawer.dart';
 import 'Dynamic Text Field/Dynamic_Text_Field.dart';
 import 'Image Picker/Image_Picker.dart';
+import 'Invoice Generator/Invoice_Generator.dart';
 import 'Login_Signup_Page/Google_Login_Page_With_Validation.dart';
 import 'Login_Signup_Page/intro_page.dart';
 import 'Login_Signup_Page/login_page.dart';
@@ -33,7 +35,8 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        '/' :(context) => AnalogClock(),
+        '/' :(context) => Invoice_Generator(),
+        '/view':(context) => HomeView(),
       },
     );
 

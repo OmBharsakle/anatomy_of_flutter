@@ -13,7 +13,7 @@ class _Dynamic_Text_FieldState extends State<Dynamic_Text_Field> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Dynamic Text Field'),
+        title: const Text('Dynamic Text Field'),
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -24,10 +24,10 @@ class _Dynamic_Text_FieldState extends State<Dynamic_Text_Field> {
                 setState(() {
                   TextEditingControllerList.removeAt(index);
                 });
-                }, icon: Icon(Icons.highlight_remove_rounded,size: 30,)),
+                }, icon: const Icon(Icons.highlight_remove_rounded,size: 30,)),
               title: TextField(
                 controller: TextEditingControllerList[index],
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     border: OutlineInputBorder(
                         borderSide: BorderSide()
                     )
@@ -37,25 +37,51 @@ class _Dynamic_Text_FieldState extends State<Dynamic_Text_Field> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          TextEditingController txtController = TextEditingController();
-          setState(() {
-            TextEditingControllerList.add(txtController);
-            for(int i=1; i<TextEditingControllerList.length; i++)
+      floatingActionButton: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+        FloatingActionButton(
+          onPressed: () {
+            TextEditingController txtController = TextEditingController();
+            setState(() {
+              TextEditingControllerList.add(txtController);
+              // SaveData='';
+            //   for(int i=0; i<TextEditingControllerList.length; i++)
+            //   {
+            //     SaveData.add(TextEditingControllerList[i].text);
+            //   }
+            });
+            // print('$SaveData ${TextEditingControllerList.length}');
+          },
+          child: const Icon(Icons.add_circle_outline_rounded),
+        ),
+        const SizedBox(width: 20,),
+        FloatingActionButton(
+          onPressed: () {
+            TextEditingController txtController = TextEditingController();
+            setState(() {
+              saveData=[];
+              for(int i=0; i<TextEditingControllerList.length; i++)
               {
-                SaveData = SaveData + " " + TextEditingControllerList[i].text;
+                if(TextEditingControllerList[i].text!='')
+                  {
+                saveData.add(TextEditingControllerList[i].text);
+
+                  }
+                    // saveData='$saveData\n${TextEditingControllerList[i].text}';
               }
-          });
-          print('$SaveData ${TextEditingControllerList.length}');
-        },
-        child: Icon(Icons.add_circle_outline_rounded),
-      ),
+              Navigator.of(context).pushNamed('/view');
+              print(saveData.length);
+            });
+          },
+          child: const Icon(Icons.arrow_forward_ios_rounded),
+        )
+      ],),
     );
   }
 }
 
-var SaveData;
+var saveData=[];
 
 TextEditingController txtController = TextEditingController();
 
