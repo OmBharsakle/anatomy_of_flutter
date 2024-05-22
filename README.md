@@ -167,6 +167,18 @@ void main(){
 
 <h1></h1>
 
+<div align="center">
+  <img height="550" src="https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/77046018-4fd7-4449-be96-e68c96fcc0ea"/>
+
+
+https://github.com/OmBharsakle/anatomy_of_flutter/assets/149371245/9b3dc688-6a83-497c-94cc-bb8b90374aad
+
+
+
+
+
+</div> 
+
 <h1></h1>
 
 <h3 align="center">Resume App Daily Task</h3>
